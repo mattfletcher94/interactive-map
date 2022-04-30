@@ -1,0 +1,57 @@
+// Override bootstrap
+a {
+  color: rgb(74, 158, 216);
+}
+.btn {
+
+  &.btn-success {
+    color: #FFF!important;
+  }
+}
+
+.form-control:disabled, 
+.form-control[readonly],
+.custom-select:disabled, 
+.custom-select[readonly] {
+    background-color: #FFF!important;
+    opacity: 0.75!important;
+    cursor:not-allowed!important;
+}
+
+.weight-300  {
+    font-weight: 300;
+}
+.weight-400 {
+    font-weight: 400;
+}
+.weight-500 {
+    font-weight: 500;
+}
+.weight-600 {
+    font-weight: 600;
+}
+.weight-700 {
+    font-weight: 700;
+}
+
+.custom-control.custom-switch.b-custom-control-sm {
+    cursor: pointer;
+
+    label {
+        cursor: pointer;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;               /* width of the entire scrollbar */
+}
+  
+::-webkit-scrollbar-track {
+    background:rgba(0,0,0,0.1);        /* color of the tracking area */
+  }
+  
+::-webkit-scrollbar-thumb {
+    background-color:rgba(0,0,0,0.1);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid transparent;  /* creates padding around scroll thumb */
+  }

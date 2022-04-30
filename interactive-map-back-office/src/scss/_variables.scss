@@ -1,0 +1,88 @@
+// Override bootstrap theme colours
+$white: #FFFFFF;
+$blue: #2169F6;
+$blue2: #2F49D1;
+$secondary: #454555;
+
+$theme-colors: (
+    "white": $white,
+    "black":#333333,
+    "primary":$blue,
+    "secondary":$secondary,
+    "danger": #E60044,
+    "success": #63c76a,
+    "light": #e1e1e1,
+    "dark": #333,
+    "text": #56636e,
+);
+
+@function theme-color($color) {
+    @return map-get($theme-colors, $color);
+}
+
+
+.btn-flat {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    user-select: none;
+    background-color: transparent;
+    border: none!important;
+    outline: none!important;
+    box-shadow: none!important;
+    padding: 0.375rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+}
+@each $color, $value in $theme-colors {
+    .btn-flat-#{$color} {
+        background-color:rgba($value, 0.15)!important;
+        color: $value!important;
+
+        &.btn-sm {
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        &[diabled="disbaled"],
+        &.disabled {
+            pointer-events: none;
+        }
+
+        &:hover {
+            background-color:rgba($value, 0.25)!important;
+            color: $value!important;
+        }
+
+        &:focus,
+        &:active {
+            background-color:rgba($value, 0.35)!important;
+            color: $value!important;
+        }
+    }
+}
+
+/*
+@mixin button-variant($color, $background, $shadow) {
+    color: $color;
+    background-color: $background;
+    &:hover,
+    &:focus,
+    &:active {
+        color: $color;
+        background-color: darken($background, 10%);
+    }
+}
+
+.btn-flat {
+    @include button-variant(#cece19, #222222, #cece19, #cece19, #cece19, #cece19);
+
+   // @include button-variant($btn-default-color, $btndefault-bg, $btn-default-box-shadow);
+}
+*/
+
+$shadow-card: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);

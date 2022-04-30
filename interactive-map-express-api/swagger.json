@@ -1,0 +1,2590 @@
+{
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"Pick_IImage.Exclude_keyofIImage.imageBase64-or-imageBase64Thumbnail__": {
+				"properties": {
+					"imageUser": {
+						"type": "string"
+					},
+					"imageName": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"imageUser",
+					"imageName"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IImageClient": {
+				"description": "Client schema",
+				"properties": {
+					"imageUser": {
+						"type": "string"
+					},
+					"imageName": {
+						"type": "string"
+					},
+					"imageId": {
+						"type": "string"
+					},
+					"imagePath": {
+						"type": "string"
+					},
+					"imagePathThumbnail": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"imageUser",
+					"imageName",
+					"imageId",
+					"imagePath",
+					"imagePathThumbnail"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse_Array_IImageClient__": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"items": {
+							"$ref": "#/components/schemas/IImageClient"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse_IImageClient_": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/IImageClient"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"type": "number",
+						"enum": [
+							null
+						],
+						"nullable": true
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_IImage.Exclude_keyofIImage.imageUser-or-imageName-or-imageBase64Thumbnail__": {
+				"properties": {
+					"imageBase64": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"imageBase64"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IImageCreate": {
+				"description": "Create",
+				"properties": {
+					"imageBase64": {
+						"type": "string"
+					},
+					"imageName": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"imageBase64"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponseErrors": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"errors": {
+						"items": {
+							"properties": {
+								"message": {
+									"type": "string"
+								},
+								"field": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"message",
+								"field"
+							],
+							"type": "object"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"message",
+					"errors"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_IImage.Exclude_keyofIImage.imageUser-or-imageBase64-or-imageBase64Thumbnail__": {
+				"properties": {
+					"imageName": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"imageName"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IImageUpdate": {
+				"description": "Update",
+				"properties": {
+					"imageName": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"imageName"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponseServerError": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"error": {
+						"properties": {},
+						"additionalProperties": {
+							"type": "string"
+						},
+						"type": "object"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IMapKeyClient": {
+				"description": "Client schema",
+				"properties": {
+					"mapKeyUser": {
+						"type": "string"
+					},
+					"mapKeyMap": {
+						"type": "string"
+					},
+					"mapKeyTitle": {
+						"type": "string"
+					},
+					"mapKeyColor": {
+						"type": "string"
+					},
+					"mapKeyInitialValue": {
+						"type": "boolean"
+					},
+					"mapKeyId": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"mapKeyUser",
+					"mapKeyMap",
+					"mapKeyTitle",
+					"mapKeyColor",
+					"mapKeyInitialValue",
+					"mapKeyId"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse_Array_IMapKeyClient__": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"items": {
+							"$ref": "#/components/schemas/IMapKeyClient"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse_IMapKeyClient_": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/IMapKeyClient"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_IMapKey.Exclude_keyofIMapKey.mapKeyUser-or-mapKeyInitialValue__": {
+				"properties": {
+					"mapKeyMap": {
+						"type": "string"
+					},
+					"mapKeyTitle": {
+						"type": "string"
+					},
+					"mapKeyColor": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"mapKeyMap",
+					"mapKeyTitle",
+					"mapKeyColor"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IMapKeyCreate": {
+				"description": "Create",
+				"properties": {
+					"mapKeyMap": {
+						"type": "string"
+					},
+					"mapKeyTitle": {
+						"type": "string"
+					},
+					"mapKeyColor": {
+						"type": "string"
+					},
+					"mapKeyInitialValue": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"mapKeyMap",
+					"mapKeyTitle",
+					"mapKeyColor"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IMapKeyUpdate": {
+				"description": "Update",
+				"properties": {
+					"mapKeyTitle": {
+						"type": "string"
+					},
+					"mapKeyColor": {
+						"type": "string"
+					},
+					"mapKeyInitialValue": {
+						"type": "boolean"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_IMapMarker.Exclude_keyofIMapMarker.mapMarkerImages__": {
+				"properties": {
+					"mapMarkerUser": {
+						"type": "string"
+					},
+					"mapMarkerMap": {
+						"type": "string"
+					},
+					"mapMarkerKey": {
+						"type": "string"
+					},
+					"mapMarkerOrder": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerName": {
+						"type": "string"
+					},
+					"mapMarkerPositionX": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerPositionY": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerLocked": {
+						"type": "boolean"
+					},
+					"mapMarkerTitle": {
+						"type": "string"
+					},
+					"mapMarkerTitleDisplayType": {
+						"type": "string"
+					},
+					"mapMarkerDescription": {
+						"type": "string"
+					},
+					"mapMarkerPitchedUnitSelection": {
+						"type": "string"
+					},
+					"mapMarkerButtonEnabled": {
+						"type": "boolean"
+					},
+					"mapMarkerButtonLabel": {
+						"type": "string"
+					},
+					"mapMarkerButtonURL": {
+						"type": "string"
+					},
+					"mapMarkerImagesEnabled": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"mapMarkerUser",
+					"mapMarkerMap",
+					"mapMarkerKey",
+					"mapMarkerOrder",
+					"mapMarkerName",
+					"mapMarkerPositionX",
+					"mapMarkerPositionY",
+					"mapMarkerLocked",
+					"mapMarkerTitle",
+					"mapMarkerTitleDisplayType",
+					"mapMarkerDescription",
+					"mapMarkerPitchedUnitSelection",
+					"mapMarkerButtonEnabled",
+					"mapMarkerButtonLabel",
+					"mapMarkerButtonURL",
+					"mapMarkerImagesEnabled"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IMapMarkerClient": {
+				"description": "Client schema",
+				"properties": {
+					"mapMarkerUser": {
+						"type": "string"
+					},
+					"mapMarkerMap": {
+						"type": "string"
+					},
+					"mapMarkerKey": {
+						"type": "string"
+					},
+					"mapMarkerOrder": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerName": {
+						"type": "string"
+					},
+					"mapMarkerPositionX": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerPositionY": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerLocked": {
+						"type": "boolean"
+					},
+					"mapMarkerTitle": {
+						"type": "string"
+					},
+					"mapMarkerTitleDisplayType": {
+						"type": "string"
+					},
+					"mapMarkerDescription": {
+						"type": "string"
+					},
+					"mapMarkerPitchedUnitSelection": {
+						"type": "string"
+					},
+					"mapMarkerButtonEnabled": {
+						"type": "boolean"
+					},
+					"mapMarkerButtonLabel": {
+						"type": "string"
+					},
+					"mapMarkerButtonURL": {
+						"type": "string"
+					},
+					"mapMarkerImagesEnabled": {
+						"type": "boolean"
+					},
+					"mapMarkerId": {
+						"type": "string"
+					},
+					"mapMarkerImages": {
+						"items": {
+							"$ref": "#/components/schemas/IImageClient"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"mapMarkerUser",
+					"mapMarkerMap",
+					"mapMarkerKey",
+					"mapMarkerOrder",
+					"mapMarkerName",
+					"mapMarkerPositionX",
+					"mapMarkerPositionY",
+					"mapMarkerLocked",
+					"mapMarkerTitle",
+					"mapMarkerTitleDisplayType",
+					"mapMarkerDescription",
+					"mapMarkerPitchedUnitSelection",
+					"mapMarkerButtonEnabled",
+					"mapMarkerButtonLabel",
+					"mapMarkerButtonURL",
+					"mapMarkerImagesEnabled",
+					"mapMarkerId",
+					"mapMarkerImages"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse_Array_IMapMarkerClient__": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"items": {
+							"$ref": "#/components/schemas/IMapMarkerClient"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse_IMapMarkerClient_": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/IMapMarkerClient"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IMapMarkerCreate": {
+				"description": "Create",
+				"properties": {
+					"mapMarkerMap": {
+						"type": "string"
+					},
+					"mapMarkerKey": {
+						"type": "string"
+					},
+					"mapMarkerOrder": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerName": {
+						"type": "string"
+					},
+					"mapMarkerPositionX": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerPositionY": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerLocked": {
+						"type": "boolean"
+					},
+					"mapMarkerTitle": {
+						"type": "string"
+					},
+					"mapMarkerTitleDisplayType": {
+						"type": "string"
+					},
+					"mapMarkerDescription": {
+						"type": "string"
+					},
+					"mapMarkerPitchedUnitSelection": {
+						"type": "string"
+					},
+					"mapMarkerButtonEnabled": {
+						"type": "boolean"
+					},
+					"mapMarkerButtonLabel": {
+						"type": "string"
+					},
+					"mapMarkerButtonURL": {
+						"type": "string"
+					},
+					"mapMarkerImagesEnabled": {
+						"type": "boolean"
+					},
+					"mapMarkerImages": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"mapMarkerPositionX",
+					"mapMarkerPositionY"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IMapMarkerUpdate": {
+				"description": "Update",
+				"properties": {
+					"mapMarkerKey": {
+						"type": "string"
+					},
+					"mapMarkerOrder": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerName": {
+						"type": "string"
+					},
+					"mapMarkerPositionX": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerPositionY": {
+						"type": "number",
+						"format": "double"
+					},
+					"mapMarkerLocked": {
+						"type": "boolean"
+					},
+					"mapMarkerTitle": {
+						"type": "string"
+					},
+					"mapMarkerTitleDisplayType": {
+						"type": "string"
+					},
+					"mapMarkerDescription": {
+						"type": "string"
+					},
+					"mapMarkerPitchedUnitSelection": {
+						"type": "string"
+					},
+					"mapMarkerButtonEnabled": {
+						"type": "boolean"
+					},
+					"mapMarkerButtonLabel": {
+						"type": "string"
+					},
+					"mapMarkerButtonURL": {
+						"type": "string"
+					},
+					"mapMarkerImagesEnabled": {
+						"type": "boolean"
+					},
+					"mapMarkerImages": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_IMap.Exclude_keyofIMap.mapImage__": {
+				"properties": {
+					"mapUser": {
+						"type": "string"
+					},
+					"mapTitle": {
+						"type": "string"
+					},
+					"mapDescription": {
+						"type": "string"
+					},
+					"mapPitchedBookingEnabled": {
+						"type": "boolean"
+					},
+					"mapPitchedBookingURL": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"mapUser",
+					"mapTitle",
+					"mapDescription",
+					"mapPitchedBookingEnabled",
+					"mapPitchedBookingURL"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IMapClient": {
+				"description": "Client schema.\r\nThis is the data strcture that is returned to the client.\r\nSometimes you don't want to return all fields.",
+				"properties": {
+					"mapUser": {
+						"type": "string"
+					},
+					"mapTitle": {
+						"type": "string"
+					},
+					"mapDescription": {
+						"type": "string"
+					},
+					"mapPitchedBookingEnabled": {
+						"type": "boolean"
+					},
+					"mapPitchedBookingURL": {
+						"type": "string"
+					},
+					"mapId": {
+						"type": "string"
+					},
+					"mapImage": {
+						"$ref": "#/components/schemas/IImageClient"
+					}
+				},
+				"required": [
+					"mapUser",
+					"mapTitle",
+					"mapDescription",
+					"mapPitchedBookingEnabled",
+					"mapPitchedBookingURL",
+					"mapId",
+					"mapImage"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse_Array_IMapClient__": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"items": {
+							"$ref": "#/components/schemas/IMapClient"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse_IMapClient_": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/IMapClient"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_IMap.Exclude_keyofIMap.mapUser-or-mapDescription-or-mapPitchedBookingEnabled-or-mapPitchedBookingURL__": {
+				"properties": {
+					"mapImage": {
+						"type": "string"
+					},
+					"mapTitle": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"mapImage",
+					"mapTitle"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IMapCreate": {
+				"description": "Create Map Schema.\r\nContains fields needed to create a new map.\r\nFields marked with question marks are optional.",
+				"properties": {
+					"mapImage": {
+						"type": "string"
+					},
+					"mapTitle": {
+						"type": "string"
+					},
+					"mapDescription": {
+						"type": "string"
+					},
+					"mapPitchedBookingEnabled": {
+						"type": "boolean"
+					},
+					"mapPitchedBookingURL": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"mapImage",
+					"mapTitle"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_IMap.Exclude_keyofIMap.mapUser-or-mapTitle-or-mapDescription-or-mapImage-or-mapPitchedBookingEnabled-or-mapPitchedBookingURL__": {
+				"properties": {},
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IMapUpdate": {
+				"description": "Update Map schema.\r\nSimiliar to the Create schema, but all fields are optional.",
+				"properties": {
+					"mapImage": {
+						"type": "string"
+					},
+					"mapTitle": {
+						"type": "string"
+					},
+					"mapDescription": {
+						"type": "string"
+					},
+					"mapPitchedBookingEnabled": {
+						"type": "boolean"
+					},
+					"mapPitchedBookingURL": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_IUser.Exclude_keyofIUser.userPassword__": {
+				"properties": {
+					"userFirstName": {
+						"type": "string"
+					},
+					"userLastName": {
+						"type": "string"
+					},
+					"userEmail": {
+						"type": "string"
+					},
+					"userRole": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"userFirstName",
+					"userLastName",
+					"userEmail",
+					"userRole"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IUserClient": {
+				"description": "Client schema",
+				"properties": {
+					"userFirstName": {
+						"type": "string"
+					},
+					"userLastName": {
+						"type": "string"
+					},
+					"userEmail": {
+						"type": "string"
+					},
+					"userRole": {
+						"type": "string"
+					},
+					"userId": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"userFirstName",
+					"userLastName",
+					"userEmail",
+					"userRole",
+					"userId"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse_IUserClient_": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/IUserClient"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IUserUpdate": {
+				"description": "Update a user",
+				"properties": {
+					"userFirstName": {
+						"type": "string"
+					},
+					"userLastName": {
+						"type": "string"
+					},
+					"userEmail": {
+						"type": "string"
+					},
+					"userPassword": {
+						"type": "string"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IUserLogin": {
+				"description": "Login a user",
+				"properties": {
+					"userEmail": {
+						"type": "string"
+					},
+					"userPassword": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"userEmail",
+					"userPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"IResponse__token-string__": {
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"properties": {
+							"token": {
+								"type": "string"
+							}
+						},
+						"required": [
+							"token"
+						],
+						"type": "object"
+					}
+				},
+				"required": [
+					"message"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"Pick_IUser.Exclude_keyofIUser.userRole__": {
+				"properties": {
+					"userFirstName": {
+						"type": "string"
+					},
+					"userLastName": {
+						"type": "string"
+					},
+					"userEmail": {
+						"type": "string"
+					},
+					"userPassword": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"userFirstName",
+					"userLastName",
+					"userEmail",
+					"userPassword"
+				],
+				"type": "object",
+				"description": "From T, pick a set of properties whose keys are in the union K"
+			},
+			"IUserCreate": {
+				"description": "Create a new user",
+				"properties": {
+					"userFirstName": {
+						"type": "string"
+					},
+					"userLastName": {
+						"type": "string"
+					},
+					"userEmail": {
+						"type": "string"
+					},
+					"userPassword": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"userFirstName",
+					"userLastName",
+					"userEmail",
+					"userPassword"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {
+			"api_key": {
+				"type": "apiKey",
+				"name": "access_token",
+				"in": "query"
+			}
+		}
+	},
+	"info": {
+		"title": "interactive-map-nodejs-express-api",
+		"version": "1.0.0",
+		"license": {
+			"name": "ISC"
+		},
+		"contact": {}
+	},
+	"openapi": "3.0.0",
+	"paths": {
+		"/images": {
+			"get": {
+				"operationId": "GetImages",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_Array_IImageClient__"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": []
+			},
+			"post": {
+				"operationId": "PostImage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IImageClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IImageCreate"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/images/{imageId}": {
+			"get": {
+				"operationId": "GetImage",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IImageClient_"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "imageId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateMap",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IImageClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "imageId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IImageUpdate"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteMap",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "imageId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/maps/{mapId}/keys": {
+			"get": {
+				"operationId": "GetAll",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_Array_IMapKeyClient__"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "Post",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapKeyClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IMapKeyCreate"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/maps/{mapId}/keys/{keyId}": {
+			"get": {
+				"operationId": "GetOne",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapKeyClient_"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "keyId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/maps/{mapId}/keys/{mapKeyId}": {
+			"patch": {
+				"operationId": "Update",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapKeyClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "mapKeyId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IMapKeyUpdate"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteMap",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "mapKeyId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/maps/{mapId}/markers": {
+			"get": {
+				"operationId": "GetMapMarkers",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_Array_IMapMarkerClient__"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"post": {
+				"operationId": "PostMapMarker",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapMarkerClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IMapMarkerCreate"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/maps/{mapId}/markers/{mapMarkerId}": {
+			"get": {
+				"operationId": "GetMapMarker",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapMarkerClient_"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "mapMarkerId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateMap",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapMarkerClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "mapMarkerId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IMapMarkerUpdate"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteMap",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "mapMarkerId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/maps": {
+			"get": {
+				"operationId": "GetMaps",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_Array_IMapClient__"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": []
+			},
+			"post": {
+				"operationId": "PostMaps",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IMapCreate"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/maps/{mapId}": {
+			"get": {
+				"operationId": "GetMap",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapClient_"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			},
+			"patch": {
+				"operationId": "UpdateMap",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IMapUpdate"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "DeleteMap",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/public/maps/{mapId}/keys": {
+			"get": {
+				"operationId": "GetMapMarkers",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_Array_IMapKeyClient__"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/public/maps/{mapId}/keys/{mapKeyId}": {
+			"get": {
+				"operationId": "GetMapMarker",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapKeyClient_"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "mapKeyId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/public/maps/{mapId}/markers": {
+			"get": {
+				"operationId": "GetMapMarkers",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_Array_IMapMarkerClient__"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/public/maps/{mapId}/markers/{mapMarkerId}": {
+			"get": {
+				"operationId": "GetMapMarker",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapMarkerClient_"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"500": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseServerError"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "mapMarkerId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/public/maps/{mapId}": {
+			"get": {
+				"operationId": "GetMap",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IMapClient_"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [
+					{
+						"in": "path",
+						"name": "mapId",
+						"required": true,
+						"schema": {
+							"type": "string"
+						}
+					}
+				]
+			}
+		},
+		"/users/self": {
+			"get": {
+				"operationId": "UserGetSelf",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IUserClient_"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": []
+			},
+			"patch": {
+				"operationId": "UpdateMap",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IUserClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IUserUpdate"
+							}
+						}
+					}
+				}
+			},
+			"delete": {
+				"operationId": "UserDelete",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					},
+					"404": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"jwt": []
+					}
+				],
+				"parameters": []
+			}
+		},
+		"/users/login": {
+			"post": {
+				"operationId": "UserLogin",
+				"responses": {
+					"200": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse__token-string__"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IUserLogin"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/users/register": {
+			"post": {
+				"operationId": "UserRegister",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					},
+					"201": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponse_IUserClient_"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/IResponseErrors"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/IUserCreate"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}

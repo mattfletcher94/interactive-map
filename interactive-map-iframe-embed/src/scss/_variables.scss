@@ -1,0 +1,39 @@
+$xs : '(min-width: 360px)';
+$sm : '(min-width: 480px)';
+$md: '(min-width: 768px)';
+$md-down: '(max-width: 768px)';
+$lg: '(min-width: 992px)';
+$lg-down: '(max-width: 992px)';
+$xl: '(min-width: 1200px)';
+
+@mixin breakpoint($media) {
+    @media only screen and #{$media} {
+        @content;
+    }
+}
+
+// Override bootstrap theme colours
+$white: #FFFFFF;
+$blue: #2169f6;
+$blue2: #2F49D1;
+$secondary: #454555;
+
+$theme-colors: (
+    "white": $white,
+    "black":#333333,
+    "primary":$blue,
+    "secondary":$secondary,
+    "danger": #d34a4f,
+    "success": #63c76a,
+    "light": #e1e1e1,
+    "dark": #333,
+    "text": #56636e,
+);
+
+@function theme-color($color) {
+    @return map-get($theme-colors, $color);
+}
+
+
+$shadow-card: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+

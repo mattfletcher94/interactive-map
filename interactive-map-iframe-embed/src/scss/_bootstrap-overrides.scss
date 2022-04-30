@@ -1,0 +1,84 @@
+// Override bootstrap
+a,
+p a {
+  color: #4a9ed8;
+}
+.btn {
+
+  &.btn-success {
+    color: #FFF!important;
+  }
+}
+
+
+.form-control:disabled, 
+.form-control[readonly],
+.custom-select:disabled, 
+.custom-select[readonly] {
+    background-color: #FFF!important;
+    opacity: 0.75!important;
+    cursor:not-allowed!important;
+}
+
+.weight-300  {
+    font-weight: 300;
+}
+.weight-400 {
+    font-weight: 400;
+}
+.weight-500 {
+    font-weight: 500;
+}
+.weight-600 {
+    font-weight: 600;
+}
+.weight-700 {
+    font-weight: 700;
+}
+
+
+
+.vb > .vb-dragger {
+    z-index: 5;
+    width: 8px;
+    right: 0;
+    opacity: 0;
+    transition: opacity 100ms ease-out;
+}
+.vb:hover {
+    
+    .vb-dragger {
+        opacity: 1;
+    }
+}
+
+.vb > .vb-dragger > .vb-dragger-styler {
+    backface-visibility: hidden;
+    transform: rotate3d(0,0,0,0);
+    transition: background-color 100ms ease-out, margin 100ms ease-out, height 100ms ease-out;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 5px 0px 5px 0;
+    border-radius: 20px;
+    height: calc(100% - 10px);
+    display: block;
+}
+
+.vb.vb-scrolling-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(0, 0, 0,.3);
+}
+
+.vb > .vb-dragger:hover > .vb-dragger-styler {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0px;
+    height: 100%;
+}
+
+.vb.vb-dragging > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0px;
+    height: 100%;
+}
+
+.vb.vb-dragging-phantom > .vb-dragger > .vb-dragger-styler {
+    background-color: rgba(33, 33, 33,.5);
+}

@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+    ],
+    "settings": {
+        "vue-format.break_attr_limit": 0,
+        "vue-format.format_need": [
+
+            "html",
+        ]
+        
+    }
+}
